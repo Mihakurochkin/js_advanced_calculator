@@ -36,8 +36,8 @@ function makeCalculator() {
     return calculator;
   };
 
-  calculator.reset = () => {
-    calculator.result = 0;
+  calculator.reset = (number = 0) => {
+    calculator.result = number;
 
     return calculator;
   };
