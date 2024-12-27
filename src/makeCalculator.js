@@ -9,7 +9,9 @@ function makeCalculator() {
   calculator.result = 0;
 
   calculator.operate = (callback, number) => {
-    return callback(number);
+    if (typeof callback === 'function') {
+      return callback(number);
+    }
   };
 
   calculator.add = (number) => {
